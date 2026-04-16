@@ -1,16 +1,46 @@
-# React + Vite
+KeenKeeper
+📌 Project Name
+KeenKeeper — Personal Relationship Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+📖 Description
+KeenKeeper is a modern web application that helps users manage and maintain meaningful relationships. It allows users to track interactions with friends, set communication goals, and visualize their social activity through a clean and intuitive interface.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## React Compiler
+⚙️ Technologies Used
+React.js (Vite) — UI development
+Tailwind CSS — Styling & responsive design
+Recharts — Data visualization (analytics chart)
+Lucide React — Icons
+Framer Motion — Animations
+LocalStorage — Data persistence
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+🚀 Key Features
+1. Friend Management Dashboard
+View all friends in a responsive grid layout
+Track days since last contact
+Status indicators (On Track, Almost Due, Overdue)
+2. Interaction Timeline
+Log interactions (Call, Text, Video)
+Filter, search, and sort timeline entries
+Automatically updates with quick check-ins
+3. Friendship Analytics
+Visualize interaction types using a pie chart
+Get insights into communication habits
+Clean and user-friendly analytics page
 
-## Expanding the ESLint configuration
+🌐 Live Preview
+Run locally:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+npm install
+npm run dev
+
+📱 Responsive Design
+Fully responsive across:
+
+Mobile 📱
+Tablet 📲
+Desktop 💻
+
+📄 License
+This project is created for educational purposes.
