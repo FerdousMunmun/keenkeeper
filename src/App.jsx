@@ -289,6 +289,8 @@ function StatCard({ value, label }) {
   );
 }
 
+
+
 function FriendCard({ friend, onOpen }) {
   return (
     <button
