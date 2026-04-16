@@ -655,7 +655,7 @@ function StatsPage({ timeline }) {
         </section>
       </main>
 
-      <footer className="mt-16 bg-emerald-900 text-white">
+      {/* <footer className="mt-16 bg-emerald-900 text-white">
         <div className="mx-auto max-w-6xl px-6 py-16 text-center">
           <div className="text-6xl font-extrabold tracking-tight">KeenKeeper</div>
           <p className="mx-auto mt-4 max-w-2xl text-sm text-emerald-50/80">
@@ -685,7 +685,7 @@ function StatsPage({ timeline }) {
             </div>
           </div>
         </div>
-      </footer>
+      </footer> */}
     </>
   );
 }
@@ -779,15 +779,95 @@ export default function KeenKeeperApp() {
     page = <NotFound navigate={navigate} />;
   }
 
+
+
+
+
+  function Shell({ children, route, navigate }) {
+const links = [
+{ to: "/", label: "Home", icon: Home },
+{ to: "/timeline", label: "Timeline", icon: Clock3 },
+{ to: "/stats", label: "Stats", icon: BarChart3 },
+];
+
+return (
+<div className="min-h-screen bg-slate-100 text-slate-800">
+<header className="border-b border-slate-200 bg-white/95 backdrop-blur">
+<div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+<button
+onClick={() => navigate("/")}
+className="text-xl font-extrabold tracking-tight text-slate-900"
+>
+KeenKeeper
+</button>
+
+<nav className="flex items-center gap-2 text-sm">
+{links.map((link) => {
+const Icon = link.icon;
+const active =
+route === link.to || (link.to !== "/" && route.startsWith(link.to));
+
+return (
+<button
+key={link.to}
+onClick={() => navigate(link.to)}
+className={`flex items-center gap-2 rounded-xl px-3 py-2 transition ${
+active
+? "bg-emerald-900 text-white"
+: "text-slate-600 hover:bg-slate-100 hover:text-slate-900"
+}`}
+>
+<Icon className="h-4 w-4" />
+<span>{link.label}</span>
+</button>
+);
+})}
+</nav>
+</div>
+</header>
+
+{children}
+
+<footer className="mt-16 bg-emerald-900 text-white">
+<div className="mx-auto max-w-6xl px-6 py-16 text-center">
+<div className="text-6xl font-extrabold tracking-tight">KeenKeeper</div>
+<p className="mx-auto mt-4 max-w-2xl text-sm text-emerald-50/80">
+Your personal shelf of meaningful connections. Browse, tend, and nurture
+the relationships that matter most.
+</p>
+
+<div className="mt-8">
+<h3 className="text-base font-semibold">Social Links</h3>
+<div className="mt-4 flex justify-center gap-3">
+{[Link, Share2, Globe].map((Icon, idx) => (
+<button
+key={idx}
+className="grid h-10 w-10 place-items-center rounded-full bg-white text-slate-800"
+>
+<Icon className="h-4 w-4" />
+</button>
+))}
+</div>
+</div>
+
+<div className="mt-10 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-6 text-xs text-emerald-50/60 md:flex-row">
+<div>© 2026 KeenKeeper. All rights reserved.</div>
+<div className="flex gap-6">
+<span>Privacy Policy</span>
+<span>Terms of Service</span>
+<span>Cookies</span>
+</div>
+</div>
+</div>
+</footer>
+</div>
+);
+}
   return (
     <Shell route={route} navigate={navigate}>
       {page}
       <Toast toast={toast} />
-      <footer className="mt-16 bg-emerald-900 text-white">
-  <div className="mx-auto max-w-6xl px-6 py-10 text-center">
-    KeenKeeper © 2026
-  </div>
-</footer>
+      
     </Shell>
    
   );
