@@ -665,8 +665,7 @@ function StatsPage({ timeline }) {
           <div className="mt-8">
             <h3 className="text-base font-semibold">Social Links</h3>
             <div className="mt-4 flex justify-center gap-3">
-              {[Link,
-  Share2,Globe].map((Icon, idx) => (
+              {[Link,Share2,Globe].map((Icon, idx) => (
                 <button
                   key={idx}
                   className="grid h-10 w-10 place-items-center rounded-full bg-white text-slate-800"
@@ -784,6 +783,12 @@ export default function KeenKeeperApp() {
     <Shell route={route} navigate={navigate}>
       {page}
       <Toast toast={toast} />
+      <footer className="mt-16 bg-emerald-900 text-white">
+  <div className="mx-auto max-w-6xl px-6 py-10 text-center">
+    KeenKeeper © 2026
+  </div>
+</footer>
     </Shell>
+   
   );
 }
