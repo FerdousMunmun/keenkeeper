@@ -86,7 +86,8 @@ This project helped me practice:
 
 ## 📸 Screenshots
 
-> Add screenshots of the application here.
+> <img width="1894" height="952" alt="image" src="https://github.com/user-attachments/assets/e0ee0939-e4d2-4df2-9221-e1626b90176a" />
+
 
 ## 🚀 Future Improvements
 
